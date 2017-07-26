@@ -1,0 +1,293 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:padding="3dip"  
+        >
+        
+      <TextView
+        android:id="@+id/tvTitel"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical" 
+        android:padding="3dip"  
+        android:textSize="20dp"
+        android:text="蓝牙名称地址:  "/>
+        
+        
+      <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical" 
+        android:layout_toRightOf="@+id/tvTitel"/>
+      
+       
+    </RelativeLayout>
+    
+     <com.ble.layoutborder.BorderRelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            >
+ 	<ScrollView     
+    		android:layout_width="fill_parent"    
+    		android:layout_height="250dp"    
+    		android:scrollbars="vertical"    
+   			android:fadingEdge="vertical"> 
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dip"   >
+
+         <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="请确保手机Download下有升级文件upFile.bin" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </LinearLayout>
+   
+    </ScrollView>
+     
+ </com.ble.layoutborder.BorderRelativeLayout>
+ 
+ <ScrollView     
+    		android:layout_width="fill_parent"    
+    		android:layout_height="wrap_content"    
+    		android:scrollbars="vertical"    
+   			android:fadingEdge="vertical">
+     
+    <TableLayout  
+        android:id="@+id/table4"  
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"  
+        android:stretchColumns="*"  
+        android:padding="3dip"  
+        >  
+        
+        <TableRow>  
+            <Button 
+                android:id="@+id/openOrCloseLock"
+                android:layout_width="1dip"
+                android:text="开电"/> 
+           
+             <Button 
+                android:id="@+id/searchGSM_version"
+                android:layout_width="1dip"
+                 android:text="GSM版本" />
+            <Button 
+                android:id="@+id/reset"
+                android:layout_width="1dip" 
+                android:text="关电"/> 
+        </TableRow>  
+        
+         <TableRow>  
+           <Button 
+                android:id="@+id/searchLockModel"
+                android:layout_width="1dip"
+                 android:text="查询设防状态" />
+           <Button 
+               	android:id="@+id/searchGIM_ID"
+               	android:layout_width="1dip"
+                android:text="查询GSM ID" />
+           <Button 
+                android:id="@+id/searchState"
+                android:layout_width="1dip"
+                android:text="电源开关状态"/> 
+        </TableRow>  
+          
+       <TableRow >  
+            <Button 
+                android:id="@+id/searchLockWorkState"
+                android:layout_width="1dip"
+                android:text="工作状态"/> 
+            <Button 
+                android:visibility="gone"
+                android:layout_width="1dip"
+                 android:text="GSM IP" />
+            <Button 
+                android:visibility="gone"
+                android:layout_width="1dip" 
+                android:text="GSM端口"/> 
+        </TableRow>  
+       
+      
+       
+        <TableRow
+           	android:visibility="gone">  
+            <Button 
+                android:id="@+id/setHuanche"
+                android:layout_width="1dip"
+                android:text="设置还车"/> 
+            <Button 
+                android:id="@+id/electricity"
+                android:layout_width="1dip"
+                 android:text="检测电量" />
+            <Button 
+                android:id="@+id/setLockModel"
+                android:layout_width="1dip" 
+                android:text="设置锁模式"/> 
+        </TableRow> 
+        
+         <TableRow
+              android:visibility="gone">  
+            <Button 
+                android:id="@+id/upgrade"
+                android:layout_width="1dip"
+                 android:text="连接设备" />
+            <Button 
+                android:id="@+id/getToken"
+                android:layout_width="1dip"
+                 android:text="获取令牌" />
+            <Button 
+                android:id="@+id/modifyKey"
+                android:layout_width="1dip" 
+                android:text="修改密钥"/> 
+        </TableRow>  
+        
+          <TableRow
+              android:visibility="gone">  
+            <Button 
+                android:id="@+id/OAD"
+                android:layout_width="1dip"
+                android:text="固件OAD"/> 
+            <Button 
+                android:id="@+id/restartBle"
+                android:layout_width="1dip"
+                 android:text="重启蓝牙" />
+            <Button 
+                android:id="@+id/modifyPassword"
+                android:layout_width="1dip" 
+                android:text="修改密码"/> 
+        </TableRow>  
+      
+        
+        <TableRow
+            android:visibility="gone">  
+            <Button 
+                android:layout_width="1dip"
+                android:text="查询锁GSM ICCID"/> 
+            <Button 
+                android:layout_width="1dip"
+                 android:text="查询锁的GSM APN" />
+            <Button 
+                android:layout_width="1dip" 
+                android:text="查询锁GSM APN 用户名"/> 
+                <Button 
+                android:layout_width="1dip"
+                android:text="查询锁GSM APN 密码"/> 
+        </TableRow>  
+       
+         <RadioGroup   
+        	android:id="@+id/setModleLayout"  
+        	android:layout_width="match_parent"  
+        	android:layout_height="wrap_content"  
+        	android:layout_marginTop="20dp"
+        	android:orientation="horizontal"  
+        	>  
+        <RadioButton   
+            android:id="@+id/zhengchangModel"  
+            android:layout_weight="1"
+            android:text="撤防"/>  
+        <RadioButton   
+            android:id="@+id/yunshuModel"
+            android:layout_weight="1"  
+            android:text="设防"/>  
+            <RadioButton
+            android:visibility="gone"   
+            android:id="@+id/chongqiSet"  
+            android:layout_weight="1"
+            android:text="设置重启"/>
+    </RadioGroup> 
+    </TableLayout>  
+  </ScrollView> 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/scanCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="扫码上传"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/getKey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="获取密钥" />
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+         android:visibility="gone">
+
+        <Button
+            android:id="@+id/newKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新密钥开锁" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/weixinShouquan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="微信授权" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6666"
+            />
+        </LinearLayout>
+     </LinearLayout>
+   </LinearLayout>

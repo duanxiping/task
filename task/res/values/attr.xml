@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <!--边框的粗度-->
+    <attr name="borderStrokeWidth" format="float"/>
+    <!--边框颜色-->
+    <attr name="borderColor" format="color"/>
+    <!--底边边线左边断开距离-->
+    <attr name="borderBottomLeftBreakSize" format="dimension"/>
+    <!--底边边线右边断开距离-->
+    <attr name="borderBottomRightBreakSize" format="dimension"/>
+    <!--是否需要上边框-->
+    <attr name="needTopBorder" format="boolean"/>
+    <!--是否需要左右边框-->
+    <attr name="needLeftAndRigtBorder" format="boolean"/>
+    <!--是否需要下边框-->
+    <attr name="needBottomBorder" format="boolean"/>
+    <declare-styleable name="BorderRelativeLayout">
+        <attr name="borderStrokeWidth"/>
+        <attr name="borderColor"/>
+        <attr name="borderBottomLeftBreakSize"/>
+        <attr name="borderBottomRightBreakSize"/>
+        <attr name="needTopBorder"/>
+        <attr name="needLeftAndRigtBorder"/>
+        <attr name="needBottomBorder"/>
+    </declare-styleable>
+</resources>
